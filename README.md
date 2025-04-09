@@ -71,14 +71,30 @@ Fill out the following table, mapping decimal numbers `0` through `15` to their 
 |---------|------------------------|
 | 0       | 0000                   |
 | 1       | 0001                   |
-| ...     | ...                    |
-| 15      | ????                   |
+| 2       | 0010                   |
+  3         0011
+  4         0100
+  5         0101
+  6         0110
+  7         0111
+  8         1000
+  9         1001
+  10        1010
+  11        1011
+  12        1100
+  13        1101
+  14        1110
+| 15      | 1111                   |
 
 **How many binary digits (bits) are needed?**
-
+4
 Explain how to calculate the number of bits required:
-<details>
-<summary>Your Answer</summary>
+<detail>
+<summary> Bsp: 10: 10:2 = 5 R0
+                   5:2  = 4 R1
+                   4:2  = 2 R0
+                   2:2  = 1 R1
+          10 = 1010 </summary>
 Erase this text and write your answer here!
 </details>
 
@@ -107,13 +123,26 @@ Refer to the truth table of a 1-bit full adder:
 #### Your Task
 Create a truth table for a **2-bit adder** without carry-in. What are the possible inputs and outputs?
 
->   Your
->
->   table
->
->   goes
->
->   here!
+B1  B0  A1  A0    Q2  Q1  Q0
+0   0   0   0     0   0   0
+0   0   0   1     0   0   1
+0   0   1   0     0   1   0
+0   0   1   1     0   1   1
+0   1   0   0     0   0   1
+0   1   0   1     0   1   0
+0   1   1   0     0   1   1
+0   1   1   1     1   0   0
+1   0   0   0     0   1   0
+1   0   0   1     0   1   1
+1   0   1   0     1   0   0
+1   0   1   1     1   0   1
+1   1   0   0     0   1   1
+1   1   0   1     1   0   0
+1   1   1   0     1   0   1
+1   1   1   1     1   1   0
+
+Eingänge 16 Kombinationen 
+Ausgänge 7 Kombinationen
 
 ---
 
@@ -125,14 +154,36 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 3. Combine them using OR gates
 4. Minimize the equations
 
+   1. Q0:      A         
+            00 01 11 10        
+    B 00    0  1  1  0
+      01    1  0  0  1
+      11    1  0  0  1
+      10    0  1  1  0
+   
+
+   Q1:      A
+            00 01 11 10
+   B 00     0  0  1  1 
+     01     0  1  0  1
+     11     1  0  1  0
+     10     1  1  0  0
+
+   Q2:      A
+            00 01 11 10
+   B 00     0  0  0  0
+     01     0  0  1  0
+     11     0  1  1  1
+     10     0  0  1  1
+         
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = .......
+Q<sub>0</sub> = A0 v B0
 
-Q<sub>1</sub> = .......
+Q<sub>1</sub> = (A1 v B1) v (A0 + B0)
 
-C<sub>out</sub> = .......
+C<sub>out</sub> = 90 minuten waren hier zu Ende
 
 </details>
 
@@ -149,4 +200,7 @@ A share link to your solution goes here: <a href=".................">Link!</a>
 ---
 
 **Remember:** Stop working after 90 minutes and record where you stopped!
+
+Mitten in der Aufgabe 3 waren die 90 minuten um.
+
 
