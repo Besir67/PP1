@@ -155,12 +155,13 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 3. Combine them using OR gates
 4. Minimize the equations
 
-   1. Q0:      A         
-            00 01 11 10        
-    B 00    0  1  1  0
-      01    1  0  0  1
-      11    1  0  0  1
-      10    0  1  1  0
+   1. |B |     A       |
+      |----|-------------|             
+      |     | 00 |01 |11 |10 |       
+     | 00   | 0 | 1 | 1 | 0 |
+     | 01   | 1 | 0 | 0 | 1 |
+     | 11   | 1 | 0 | 0 | 1 |
+     | 10   | 0 | 1 | 1 | 0 |
    
 
    Q1:      A
